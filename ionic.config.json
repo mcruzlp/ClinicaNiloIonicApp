@@ -1,0 +1,7 @@
+{
+  "name": "ClinicaNiloIonicApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
