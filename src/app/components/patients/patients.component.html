@@ -10,9 +10,9 @@
   </ion-list-header>
 
   <ion-item *ngFor="let p of patientsService.getPatients() | async">
-    <ion-label>{{ p.nombre }}</ion-label>
-    <ion-label>{{ p.tlfn }}</ion-label>
-    <ion-label>{{ p.email }}</ion-label>
+    <ion-label class="item">{{ p.nombre }}</ion-label>
+    <ion-label class="item">{{ p.tlfn }}</ion-label>
+    <ion-label class="item">{{ p.email }}</ion-label>
     <ion-button (click)="editPatient(p.nombre)">
       <ion-icon name="pencil"></ion-icon>
     </ion-button>
