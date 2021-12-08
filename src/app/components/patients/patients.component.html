@@ -1,0 +1,24 @@
+<ion-list>
+  <ion-list-header color="primary">
+    <ion-icon name="person" size="large"></ion-icon>
+    <ion-label>&nbsp;Pacientes</ion-label>
+    <ion-buttons>
+      <ion-button (click)="editPatient()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-list-header>
+
+  <ion-item *ngFor="let p of patientsService.getPatients() | async">
+    <ion-label>{{ p.nombre }}</ion-label>
+    <ion-label>{{ p.tlfn }}</ion-label>
+    <ion-label>{{ p.email }}</ion-label>
+    <ion-button (click)="editPatient(p.nombre)">
+      <ion-icon name="pencil"></ion-icon>
+    </ion-button>
+    <ion-icon></ion-icon><!--Espacio para separar los dos iconos-->
+    <ion-button (click)="presentAlertConfirm(p)">
+      <ion-icon name="trash" ></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-list>

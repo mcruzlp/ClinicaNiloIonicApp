@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar paciente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Paciente</ion-label>
+    <ion-input clearInput [(ngModel)]="patient.nombre" placeholder="Nombre y apellidos"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Teléfono</ion-label>
+    <ion-input clearInput [(ngModel)]="patient.tlfn"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input clearInput [(ngModel)]="patient.email" placeholder="email@email.com"></ion-input>
+  </ion-item>
+  <br />
+  <ion-button (click)="savePatient()" expand="full"> Guardar </ion-button>
+</ion-content>
