@@ -1,0 +1,1 @@
+# ClinicaNiloIonicApp-persistance
