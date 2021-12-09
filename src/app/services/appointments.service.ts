@@ -8,7 +8,7 @@ import { Storage } from '@capacitor/storage';
 })
 export class AppointmentsService {
   appointments: Appointment[] = [];
-  appointmentsCounter: number = 3;
+  appointmentsCounter: number = 0;
 
   constructor() {
     this.getAppointmentsFromStorage().then(

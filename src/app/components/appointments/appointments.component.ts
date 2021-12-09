@@ -10,8 +10,6 @@ import { AppointmentsService } from 'src/app/services/appointments.service';
   styleUrls: ['./appointments.component.scss'],
 })
 export class AppointmentsComponent implements OnInit {
-  appointment: Appointment = { id: null, date: '', hour: '', patient: '' };
-
   constructor(
     private appointmentsService: AppointmentsService,
     private router: Router,
@@ -35,7 +33,6 @@ export class AppointmentsComponent implements OnInit {
   }
 
   async presentAlertConfirm(a: Appointment) {
-    console.log('alerta');
     const alert = await this.alertController.create({
       header: 'Borrar cita',
       message: `¿Estás seguro de que quieres borrar la cita de <strong>${a.patient}</strong>?`,

@@ -10,9 +10,6 @@ import { PatientsService } from 'src/app/services/patients.service';
   styleUrls: ['./patients.component.scss'],
 })
 export class PatientsComponent implements OnInit {
-
-  patient: Patient = { nombre: '', tlfn: null, email: '' };
-
   constructor(
     private router: Router,
     private patientsService: PatientsService,
@@ -36,7 +33,6 @@ export class PatientsComponent implements OnInit {
   }
 
   async presentAlertConfirm(p: Patient) {
-    console.log('alerta');
     const alert = await this.alertController.create({
       header: 'Borrar paciente',
       message: `¿Estás seguro de que quieres borrar a <strong>${p.nombre}</strong>?`,

@@ -10,15 +10,15 @@
 <ion-content class="ion-padding">
   <ion-item>
     <ion-label position="floating">Fecha</ion-label>
-    <ion-input clearInput [(ngModel)]="appointment.date"></ion-input>
+    <ion-input clearInput [(ngModel)]="appointment.date" placeholder="DD/MM/YYYY"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Hora</ion-label>
-    <ion-input clearInput [(ngModel)]="appointment.hour"></ion-input>
+    <ion-input clearInput [(ngModel)]="appointment.hour" placeholder="HH:MM"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Paciente</ion-label>
-    <ion-input clearInput [(ngModel)]="appointment.patient"></ion-input>
+    <ion-input clearInput [(ngModel)]="appointment.patient" placeholder="Nombre y apellidos"></ion-input>
   </ion-item>
   <br />
   <ion-button (click)="saveAppointment()" expand="full"> Guardar </ion-button>
