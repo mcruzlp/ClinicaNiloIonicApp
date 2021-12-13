@@ -3,7 +3,7 @@
 <img width="240px" src="./src/assets/capturas/ionic.png">
 Aplicación desarrollada con Ionic para la primera evaluación de la asignatura de Acceso a Datos del CFGS de Desarrollo de Aplicaciones Multiplataforma (IES Campanillas)
 
-Enlace al vídeo resumen del funcionamiento de la pp - [YOUTUBE](https://youtu.be/faZBctWYOQ0)
+Enlace al vídeo resumen del funcionamiento de la App - [YOUTUBE](https://youtu.be/faZBctWYOQ0)
 
 Para la persistencia de datos se ha utilizado Capacitor.
 
