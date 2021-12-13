@@ -1,6 +1,6 @@
 export class Appointment {
   id?: number;
-  date: Date;
+  date: string;
   hour: string;
   patient: string;
 }

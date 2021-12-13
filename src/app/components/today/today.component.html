@@ -4,17 +4,19 @@
     &nbsp;Citas de hoy
   </ion-list-header>
 
-  <ion-item *ngIf="appointmToday">
-    <ion-item *ngFor="let a of appointmentsService.getAppointments()">
-      <ion-label>{{ a.date }}</ion-label>
-      <ion-label>{{ a.hour }}</ion-label>
-      <ion-label>{{ a.patient }}</ion-label>
-      <ion-icon name="pencil"></ion-icon>
-      <ion-icon></ion-icon>
-      <ion-icon name="trash"></ion-icon>
-    </ion-item>
-  </ion-item>
-  <ion-item *ngIf="!appointmToday" lines="none">
-    <p>No tiene citas para hoy</p>
+  <!--<ion-item *ngIf="!appointsToday">
+    <ion-label>No tienes citas programadas para hoy</ion-label>
+  </ion-item>-->
+  <ion-item *ngFor="let a of appointmentsService.getAppointments() | async">
+    <!--<ion-item *ngIf="a.date != today">
+      <ion-label>No tienes citas programadas para hoy</ion-label>
+    </ion-item>-->
+    <ion-label class="item">{{ a.date | date: "dd/MM/yyyy" }}</ion-label>
+    <ion-label class="item">{{ a.hour | date: "HH:mm" }}</ion-label>
+    <ion-label class="item">{{ a.patient }}</ion-label>
+    <ion-icon></ion-icon>
+    <ion-icon></ion-icon>
+    <ion-icon></ion-icon>
+    <ion-icon></ion-icon>
   </ion-item>
 </ion-list>

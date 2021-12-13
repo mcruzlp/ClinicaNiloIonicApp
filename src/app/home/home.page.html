@@ -1,16 +1,18 @@
-<ion-content [scrollEvents]="true"
+<ion-content
+  [scrollEvents]="true"
   (ionScrollStart)="logScrollStart()"
   (ionScroll)="logScrolling($event)"
-  (ionScrollEnd)="logScrollEnd()">
+  (ionScrollEnd)="logScrollEnd()"
+>
+  <ion-header> </ion-header>
 
-  <ion-header>
-  </ion-header>
-
-  <ion-list >
+  <ion-list>
     <ion-item lines="none">
-      <ion-img [src]="'../assets/logo-nilo-web-tablet-phone-00' + '.png'"></ion-img>
+      <ion-img
+        [src]="'../assets/logo-nilo-web-tablet-phone-00' + '.png'"
+      ></ion-img>
     </ion-item>
-    <app-today></app-today>
+    <!--<app-today></app-today>-->
     <app-appointments></app-appointments>
     <app-patients></app-patients>
   </ion-list>

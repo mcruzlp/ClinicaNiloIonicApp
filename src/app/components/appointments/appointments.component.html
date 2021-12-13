@@ -10,14 +10,12 @@
   </ion-list-header>
 
   <ion-item *ngFor="let a of appointmentsService.getAppointments() | async">
-    <ion-label class="item">{{ a.date }}</ion-label>
-    <ion-label class="item">{{ a.hour }}</ion-label>
+    <ion-label class="item">{{ a.date | date: "dd/MM" }}</ion-label>
+    <!--<ion-label class="item">{{ a.hour | date:'HH:mm'}}</ion-label>-->
     <ion-label class="item">{{ a.patient }}</ion-label>
     <ion-button (click)="editAppointment(a.id)">
       <ion-icon name="pencil"></ion-icon>
     </ion-button>
-    <ion-icon></ion-icon
-    ><!--Espacio para separar los dos iconos-->
     <ion-button (click)="presentAlertConfirm(a)">
       <ion-icon name="trash"></ion-icon>
     </ion-button>

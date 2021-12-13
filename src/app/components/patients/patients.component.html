@@ -11,13 +11,11 @@
 
   <ion-item *ngFor="let p of patientsService.getPatients() | async">
     <ion-label class="item">{{ p.nombre }}</ion-label>
-    <ion-label class="item">{{ p.tlfn }}</ion-label>
-    <ion-label class="item">{{ p.email }}</ion-label>
+    <!--<ion-label class="item">{{ p.tlfn }}</ion-label>
+    <ion-label class="item">{{ p.email }}</ion-label>-->
     <ion-button (click)="editPatient(p.nombre)">
       <ion-icon name="pencil"></ion-icon>
     </ion-button>
-    <ion-icon></ion-icon>
-    <!--Espacio para separar los dos iconos-->
     <ion-button (click)="presentAlertConfirm(p)">
       <ion-icon name="trash"></ion-icon>
     </ion-button>
