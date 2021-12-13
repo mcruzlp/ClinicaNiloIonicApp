@@ -20,6 +20,10 @@ export class AppointmentsService {
     );
   }
 
+  public getLocalAppointments(): Appointment[] {
+    return this.appointments;
+  }
+
   public getAppointments(): Observable<Appointment[]> {
     return of(this.appointments);
   }

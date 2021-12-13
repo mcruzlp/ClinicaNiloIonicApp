@@ -8,9 +8,14 @@ import { Storage } from '@capacitor/storage';
 })
 export class PatientsService {
   patients: Patient[] = [];
+  patientsCounter: number = 0;
 
   constructor() {
     this.getPatientsFromStorage().then((data) => (this.patients = data));
+    
+    this.getPatientsCounterFromStorage().then(
+      (data) => (this.patientsCounter = data)
+    );
   }
 
   public getPatients(): Observable<Patient[]> {
@@ -34,6 +39,7 @@ export class PatientsService {
     }
 
     await this.savePatientsIntoStorage();
+    await this.savePatientsCounterIntoStorage();
 
     return true;
   }
@@ -48,10 +54,25 @@ export class PatientsService {
     return JSON.parse(ret.value) ? JSON.parse(ret.value) : [];
   }
 
+  async getPatientsCounterFromStorage(): Promise<number> {
+    const pc = await Storage.get({ key: 'patientsCounter' });
+    console.log('patientsCounter: ' + JSON.stringify(pc.value));
+    return Number.isInteger(+pc.value) ? +pc.value : 0;
+  }
+
   async savePatientsIntoStorage(): Promise<boolean> {
     await Storage.set({
       key: 'patients',
       value: JSON.stringify(this.patients),
+    });
+
+    return true;
+  }
+
+  async savePatientsCounterIntoStorage(): Promise<boolean> {
+    await Storage.set({
+      key: 'patientsCounter',
+      value: '' + this.patientsCounter,
     });
 
     return true;

@@ -1,22 +1,18 @@
-<ion-content [scrollEvents]="true"
+<ion-content
+  [scrollEvents]="true"
   (ionScrollStart)="logScrollStart()"
   (ionScroll)="logScrolling($event)"
-  (ionScrollEnd)="logScrollEnd()">
-
-  <ion-header [translucent]="true">
-    <ion-toolbar color="primary">
-      <ion-title>
-        <ion-item color="primary" lines="none" class="ion-text-center">
-          <!--<ion-button slot="end" (click)="onClick()">
-          <ion-icon slot="icon-only" name="menu"></ion-icon>
-        </ion-button>-->
-          <ion-label>Clinica Nilo</ion-label>
-        </ion-item>
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+  (ionScrollEnd)="logScrollEnd()"
+>
+  <ion-header> </ion-header>
 
   <ion-list>
+    <ion-item lines="none">
+      <ion-img
+        [src]="'../assets/logo-nilo-web-tablet-phone-00' + '.png'"
+      ></ion-img>
+    </ion-item>
+    <!--<app-today></app-today>-->
     <app-appointments></app-appointments>
     <app-patients></app-patients>
   </ion-list>

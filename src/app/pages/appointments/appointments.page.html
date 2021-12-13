@@ -10,15 +10,34 @@
 <ion-content class="ion-padding">
   <ion-item>
     <ion-label position="floating">Fecha</ion-label>
-    <ion-input clearInput [(ngModel)]="appointment.date" placeholder="DD/MM/YYYY"></ion-input>
+    <ion-input
+      ><ion-datetime
+        display-format="DD/MM/YYYY"
+        min="2021"
+        max="2050"
+        pickerFormat="DD/MM/YYYY"
+        [(ngModel)]="appointment.date"
+      ></ion-datetime
+    ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Hora</ion-label>
-    <ion-input clearInput [(ngModel)]="appointment.hour" placeholder="HH:MM"></ion-input>
+    <ion-input>
+      <ion-datetime
+        displayFormat="HH:mm"
+        minuteValues="0,15,30,45"
+        pickerFormat="HH:mm"
+        [(ngModel)]="appointment.hour"
+      ></ion-datetime>
+    </ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Paciente</ion-label>
-    <ion-input clearInput [(ngModel)]="appointment.patient" placeholder="Nombre y apellidos"></ion-input>
+    <ion-input
+      clearInput
+      [(ngModel)]="appointment.patient"
+      placeholder="Nombre y apellidos"
+    ></ion-input>
   </ion-item>
   <br />
   <ion-button (click)="saveAppointment()" expand="full"> Guardar </ion-button>

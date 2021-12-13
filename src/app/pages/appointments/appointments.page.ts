@@ -9,7 +9,7 @@ import { AppointmentsService } from 'src/app/services/appointments.service';
   styleUrls: ['./appointments.page.scss'],
 })
 export class AppointmentsPage implements OnInit {
-  appointment: Appointment = { id: null, date: '', hour: '', patient: '' };
+  appointment: Appointment = { id: null, date: null, hour: '', patient: '' };
 
   constructor(
     private appointmentsService: AppointmentsService,

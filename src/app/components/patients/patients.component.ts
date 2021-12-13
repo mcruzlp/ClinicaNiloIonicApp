@@ -10,13 +10,19 @@ import { PatientsService } from 'src/app/services/patients.service';
   styleUrls: ['./patients.component.scss'],
 })
 export class PatientsComponent implements OnInit {
+  patientsCounter: number;
+
   constructor(
     private router: Router,
     private patientsService: PatientsService,
     private alertController: AlertController
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.patientsService
+      .getPatientsCounterFromStorage()
+      .then((data) => (this.patientsCounter = data));
+  }
 
   addPatient() {
     this.router.navigateByUrl('/patients');
