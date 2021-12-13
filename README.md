@@ -1,7 +1,7 @@
 # ClinicaNiloIonicApp
 
 <img width="240px" src="./src/assets/capturas/ionic.png">
-Aplicación desarrollada con Ionic para la primera evaluación de la asignatura de Acceso a Datos del CFGS de Desarrollo de Aplicaciones Multiplataforma (IES Campanillas)
+Aplicación desarrollada con Ionic para la primera evaluación de la asignatura de Acceso a Datos del CFGS de Desarrollo de Aplicaciones Multiplataforma (IES Campanillas).
 
 Enlace al vídeo resumen del funcionamiento de la App - [YOUTUBE](https://youtu.be/faZBctWYOQ0)
 
