@@ -10,6 +10,7 @@ import { AppointmentsService } from 'src/app/services/appointments.service';
   styleUrls: ['./appointments.component.scss'],
 })
 export class AppointmentsComponent implements OnInit {
+
   constructor(
     private appointmentsService: AppointmentsService,
     private router: Router,

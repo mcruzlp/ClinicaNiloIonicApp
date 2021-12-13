@@ -4,23 +4,14 @@
   (ionScrollEnd)="logScrollEnd()">
 
   <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>
-        <ion-item color="primary" lines="none" class="ion-text-center">
-          <ion-label>Clinica Nilo</ion-label>
-        </ion-item>
-      </ion-title>
-    </ion-toolbar>
   </ion-header>
 
-  <ion-list>
-    <ion-item>
-      <ion-img [src]="'../assets/logo-nilo-web-white-300x94' + '.png'"></ion-img>
+  <ion-list >
+    <ion-item lines="none">
+      <ion-img [src]="'../assets/logo-nilo-web-tablet-phone-00' + '.png'"></ion-img>
     </ion-item>
+    <app-today></app-today>
     <app-appointments></app-appointments>
-    <ion-item-divider>
-      <ion-label></ion-label>
-    </ion-item-divider>
     <app-patients></app-patients>
   </ion-list>
 </ion-content>
