@@ -9,7 +9,7 @@ Para la persistencia de datos se ha utilizado Capacitor, para utilizarlo, tienes
 ```consola
 npm install @capacitor/storage
 npx cap sync
-´´´´
+```
 
 ### Pantalla principal: 
 <img width="240px" src="./src/assets/capturas/01_mainpage.png">
